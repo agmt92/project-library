@@ -5,7 +5,7 @@ const { Schema } = mongoose;
 // Define a schema that stores the book title, an array of comments, and a comment count.
 const bookSchema = new Schema({
     title: { type: String, required: true },
-    comments: [String],
+    comments: {type: [String], default: []},
     commentcount: { type: Number, default: 0 }
     });
 
